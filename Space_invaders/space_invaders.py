@@ -96,7 +96,7 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
         if yellow.colliderect(bullet):
             pygame.event.post(pygame.event.Event(yellow_hit))
             red_bullets.remove(bullet)
-        elif bullet.x > WIDTH:
+        elif bullet.x < 0:
             red_bullets.remove(bullet)
 
 def draw_winner(text, red_health, yellow_health):
@@ -164,6 +164,10 @@ def main():
         draw_window(red, yellow, Red_color, Yellow_color, red_bullets, yellow_bullets, red_health, yellow_health)
 
 main()
+
+                 
+
+
 
                  
 
